@@ -13,6 +13,8 @@ export const AddressQrBox: FC<IAddressQrBox> = (props) => {
     return (
         <Box
             width="100%"
+            mt={2}
+            padding="10px"
             display="flex"
             flexDirection="column"
         >
@@ -23,6 +25,8 @@ export const AddressQrBox: FC<IAddressQrBox> = (props) => {
                 </Box>
             </Typography>
             <Box
+                width="200px"
+                margin="0 auto"
                 component="img"
                 src={`/${qrImageName}`}
             />

@@ -14,7 +14,7 @@ export const Header: FC<IHeader> = (props) => {
         isShow && (
             <Box sx={{ flexGrow: 1 }}>
             <AppBar
-                position="static"
+                position="sticky"
                 color="info"
                 enableColorOnDark={true}
                 sx={
