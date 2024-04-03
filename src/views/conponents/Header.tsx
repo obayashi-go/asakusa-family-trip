@@ -14,12 +14,13 @@ export const Header: FC<IHeader> = (props) => {
         isShow && (
             <Box sx={{ flexGrow: 1 }}>
             <AppBar
-                position="sticky"
+                position="fixed"
                 color="info"
                 enableColorOnDark={true}
                 sx={
                     {
-                        background: HeaderBackgound
+                        background: HeaderBackgound,
+                        minHeight: "60px"
                     }
                 }
                 >

@@ -4,7 +4,7 @@ import ArrowBackIosSharpIcon from '@mui/icons-material/ArrowBackIosSharp';//左�
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';//右矢印アイコン
 import { MenuColorCode } from "../../../../utils/constants/menu-color-code";
 import { CountdownInterval } from "./use-count-down-interval";
-import { PhotoDataUri } from "../../../../utils/constants/photo-data-uri";
+// import { PhotoDataUri } from "../../../../utils/constants/photo-data-uri";
 
 const lColor = 'black';
 const bgColor = 'trans';
@@ -23,36 +23,29 @@ const ImgBox = styled(Box)({
 const SectionBox = styled('section')({
     position: "relative",
     width: "100vw",
-    minHeight: "100vh",
+    height: "100vh",
     "& figure": {
         display: "flex",
         position: "fixed",
         top: 0,
         left: 0,
         width: "100%",
-        minHeight: "100vh",
-        backgroundSize: "cover",
+        minHeight: "100%",
+        backgroundSize: "100vw 100%",
+        backgroundRepeat: "no-repeat",
         margin: 0,
     },
     '& .figure-1': {
-        backgroundImage:  `url(${PhotoDataUri.skyTree})`,
-        // background: "#000",
-        // backgroundPosition: "co"
+        backgroundImage: "url(https://amanaimages.com/pickup/img/skytree120903/10247003890.jpg)",
+        backgroundPosition: "center",
     },
-    '& .figure-2': {
-        // backgroundImage: 'url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/photo-1506260408121-e353d10b87c7.jpg")',
-        // background: "#f1f1f1",
-    },
-    '& .figure-3': {
-        backgroundImage: 'url(odaiba.jpg)',
-        // background: "#ff0",
-        backgroundPosition: "center"
-    }
-    // '&:nth-of-type(1) figure': {
-    //     backgroundImage: 'url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/photo-1506260408121-e353d10b87c7.jpg)'
+    // '& .figure-2': {
+    //     backgroundImage: 'url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/photo-1506260408121-e353d10b87c7.jpg")',
+    //     background: "#f1f1f1",
     // },
-    // '&:nth-of-type(2) figure': {
-    //     backgroundImage: 'url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/photo-1506744038136-46273834b3fb.jpg)'
+    // '& .figure-3': {
+    //     backgroundImage: 'url(odaiba.jpg)',
+    //     backgroundPosition: "center"
     // }
 });
 
@@ -81,18 +74,64 @@ const SectionSentence = styled(Typography)({
     textAlign: "center",
 });
 
-const SubSentence = styled(Typography)({
-    width: "100%",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    textAlign: "center",
-    position: "absolute",
-    top: "calc(50vh - 20px)",
-    color: "#fff",
-    fontFamily: '"Courgette",serif',
-    fontSize: "20px",
-    textShadow: "2px 2px 4px #000"
+// const SubSentence = styled(Typography)({
+//     width: "100%",
+//     display: "flex",
+//     alignItems: "center",
+//     justifyContent: "center",
+//     textAlign: "center",
+//     position: "absolute",
+//     top: "calc(50vh - 20px)",
+//     color: "#fff",
+//     fontFamily: '"Courgette",serif',
+//     fontSize: "20px",
+//     textShadow: "2px 2px 4px #000"
+// });
+
+const SentenceSection = styled('section')({
+    position: "relative",
+    "& .content__inner": {
+        maxWidth: "100%",
+        display: "block",
+        padding: "2rem",
+        margin: "0 auto 8rem",
+        background: "#fff",
+        "&::before": {
+            content: '""',
+            display: "block",
+            position: "absolute",
+            top: "-99px",
+            left: 0,
+            width: "100%",
+            height: "100px",
+            backgroundColor: "#fff",
+            zIndex: "99",
+            clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)",
+        },
+        "& .content__author": {
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            marginBottom: "4rem",
+            width: "100%",
+            fontFamily: '"Courgette", serif',
+            fontSize: "1.5rem",
+            letterSpacing: "-0.125rem",
+            textAalign: "center",
+            "&::before, &::after": {
+                content: '""',
+                flex: 1,
+                height: "2px",
+                backgroundColor: "#A9DFBF",
+            },
+            "&::before": {
+                marginRight: "10px"
+            },
+            "&::after": {
+                marginLeft: "10px"
+            },
+        }
+    }
 })
 
 export const useRender = () => {
@@ -100,7 +139,7 @@ export const useRender = () => {
         return (
         <Box
         position="relative"
-        minHeight="100vh"
+        height="100vh"
         sx={{
             backgroundColor:"#e6b4ce4a",
             opacity: "0.8",
@@ -110,7 +149,7 @@ export const useRender = () => {
              NextIcon={<ArrowForwardIosSharpIcon/>} //矢印アイコンを別のアイコンに変更
              PrevIcon={<ArrowBackIosSharpIcon/>} //矢印アイコンを別のアイコンに変更
              autoPlay = {true} //自動でCarouselを動かすかどうか(true or false)
-             interval = {3000}
+             interval = {2500}
              duration = {500} // アニメーションの長さを定義
              swipe = {true} // スワイプで動かせるかどうか
             //  IndicatorIcon={true}
@@ -118,7 +157,6 @@ export const useRender = () => {
              indicatorContainerProps={{
                 style: {
                     margin: 0,
-                    borderBottom: "solid 6px #000"
                 }
               }}
                indicatorIconButtonProps={{//アクティブでない下の丸いアイコンの設定
@@ -235,54 +273,36 @@ export const useRender = () => {
             <>
                 <SectionBox>
                     <SectionInnerBox id="section-0">
-                        <figure className="figure-1"></figure>
+                        <figure className="figure-1">
+                        </figure>
                         <SectionSentence>皆さんお誕生日<br/>おめでとうございます</SectionSentence>
                         {/* <SubSentence>皆さんお誕生日<br/>おめでとうございます</SubSentence> */}
                     </SectionInnerBox>
                 </SectionBox>
-                <SectionBox>
+                {/* <SectionBox>
                     <SectionInnerBox id="section-2">
                         <figure className="figure-2"></figure>
                         <SectionSentence>これからの1年が<br/>素敵な1年になりますよう</SectionSentence>
                         <SubSentence>これからの1年が<br/>素敵な1年になりますよう</SubSentence>
                     </SectionInnerBox>
-                </SectionBox>
-                <SectionBox>
+                </SectionBox> */}
+                {/* <SectionBox>
                     <SectionInnerBox id="section-3">
                         <figure className="figure-3"></figure>
                         <SectionSentence>素敵な旅の<br/>プレゼントです</SectionSentence>
-                        {/* <SubSentence>素敵な旅の<br/>プレゼントです</SubSentence> */}
-                    </SectionInnerBox>
-                </SectionBox>
-                {/* <SectionBox>
-                    <SectionInnerBox id="section-2">
-                        <figure></figure>
-                        <SectionSentence>Take lots of photos</SectionSentence>
-                    </SectionInnerBox>
-                </SectionBox>
-                <SectionBox>
-                    <SectionInnerBox id="section-3">
-                        <figure></figure>
-                        <SectionSentence>Each one of them pretty</SectionSentence>
+                        <SubSentence>素敵な旅の<br/>プレゼントです</SubSentence>
                     </SectionInnerBox>
                 </SectionBox> */}
-                {/* <section class="content">
-                    <article class="content__inner">
-                        <h1 class="content__title">Some Happy Little Text</h1>
-                        <h3 class="content__author">By Bob Ross</h3>
-                        <p>A thin paint will stick to a thick paint. The shadows are just like the highlights, but we're going in the opposite direction. When you do it your way you can go anywhere you choose.</p>
-                        <p>You have to make almighty decisions when you're the creator. When you buy that first tube of paint it gives you an artist license. There we go. The little tiny Tim easels will let you down. Let's just drop a little Evergreen right here.</p>
-                        <p>Trees grow in all kinds of ways. They're not all perfectly straight. Not every limb is perfect. I really believe that if you practice enough you could paint the 'Mona Lisa' with a two-inch brush. Just pretend you are a whisper floating across a mountain. This is your world, whatever makes you happy you can put in it. Go crazy.</p>
-                        <p>The first step to doing anything is to believe you can do it. See it finished in your mind before you ever start. We'll play with clouds today. Every single thing in the world has its own personality - and it is up to you to make friends with the little rascals. Don't kill all your dark areas - you need them to show the light. We don't want to set these clouds on fire. Every day I learn.</p>
-                        <blockquote>When you do it your way you can go anywhere you choose.</blockquote>
-                        <p>Let's get wild today. Once you learn the technique, ohhh! Turn you loose on the world; you become a tiger. This is probably the greatest thing to happen in my life - to be able to share this with you.</p>
-                        <p>I'm a water fanatic. I love water. This is gonna be a happy little seascape. Put light against light - you have nothing. Put dark against dark - you have nothing. It's the contrast of light and dark that each give the other one meaning. Let's put a touch more of the magic here. I'm going to mix up a little color. We’ll use Van Dyke Brown, Permanent Red, and a little bit of Prussian Blue.</p>
-                        <p>And that's when it becomes fun - you don't have to spend your time thinking about what's happening - you just let it happen. Let all these things just sort of happen. Don't fight it, use what happens. Let's put some happy little bushes on the other side now.</p>
-                        <blockquote>Don't fight it, use what happens.</blockquote>
-                        <p>If we're going to have animals around we all have to be concerned about them and take care of them. I'll go over the colors one more time that we use: Titanium white, Thalo green, Prussian blue, Van Dyke brown, Alizarin crimson, Sap green, Cad yellow, and Permanent red. Anytime you learn something your time and energy are not wasted. This is your world. We want to use a lot pressure while using no pressure at all. Just let go - and fall like a little waterfall.</p>
-                        <p>Let's build some happy little clouds up here. Everyone is going to see things differently - and that's the way it should be. Let's do that again. A tree needs to be your friend if you're going to paint him. That's why I paint - because I can create the kind of world I want - and I can make this world as happy as I want it.</p>
+                <SentenceSection>
+                    <article className="content__inner">
+                        <h1 className="content__title">浅草旅行 大林家パック</h1>
+                        <h3 className="content__author">By Go Iyori Ao</h3>
+                        <Typography sx={{fontSize: "1.2rem", lineHeight: "2.5"}}>ささやかでございますが、私たちより、</Typography>
+                        <Typography sx={{fontSize: "1.2rem", lineHeight: "2.5"}}>いつもお世話になっている、ババさん、パパさん、ママさんへ、浅草旅行を誕生日プレゼントとして差し上げます。</Typography>
+                        <Typography sx={{fontSize: "1.2rem", lineHeight: "2.5"}}>これからの1年も、たくさんの楽しい思い出が出来ることを楽しみにしております。</Typography>
+                        <Typography sx={{fontSize: "1.2rem", lineHeight: "2.5"}}>この旅行も、是非存分にお楽しみ頂けるよう努力させて頂きます！</Typography>
                     </article>
-                </section> */}
+                </SentenceSection>
             </>
         )
     }

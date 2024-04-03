@@ -1,12 +1,16 @@
 import { type FC } from "react"
-// import { useRender } from "./logic/use-render";
+import { PageTitle } from "../../conponents/PageTitle"
+import { ContentsInnerWrap } from "../../conponents/contents-inner-wrap"
+import { useRender } from "./logic/use-render";
 
 export const Schedules: FC = () => {
-    // const { PageTitle } = useRender();
+    const { TimeTable } = useRender();
     return (
         <>
-            {/* <PageTitle /> */}
-            <h1>スケジュール</h1>
+            <PageTitle title="スケジュール" pageType="schedule" />
+            <ContentsInnerWrap>
+                <TimeTable />
+            </ContentsInnerWrap>
         </>
     )
 }

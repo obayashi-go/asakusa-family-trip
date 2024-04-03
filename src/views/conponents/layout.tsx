@@ -10,15 +10,21 @@ export type ICustomLayout = {
 
 const Wrapper = styled(Box)({
     width: "100%",
-    background: "#fafafa"
-})
+    background: "#fff"
+});
+
+const ContentsWrapper = styled(Box)({
+    marginTop: "60px"
+});
 
 export const CustomLayout: FC<ICustomLayout> = (props) => {
     const { children } = props;
     return (
         <Wrapper>
             <Header isShow={true} />
-            {children}
+            <ContentsWrapper>
+                {children}
+            </ContentsWrapper>
             <Footer />
         </Wrapper>
     )

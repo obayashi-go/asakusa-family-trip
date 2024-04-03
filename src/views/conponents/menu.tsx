@@ -6,6 +6,7 @@ import StadiumIcon from '@mui/icons-material/Stadium';
 import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';
 import MenuIcon from '@mui/icons-material/Menu';
 import { MenuColorCode } from "../../utils/constants/menu-color-code";
+import { UrlMap } from "../../utils/constants/url-map";
 
 export const Menu: FC = () => {
     const [open, setOpen] = useState(false);
@@ -17,10 +18,10 @@ export const Menu: FC = () => {
         <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
           <List>
             {[
-                {label: 'トップ', icon: <ThunderstormIcon sx={{color: MenuColorCode.top}}/>, to: "/"},
-                {label: 'スケジュール', icon: <AccessAlarmsIcon sx={{color: MenuColorCode.schedule}} />, to: "/schedule"},
-                {label: 'イベント', icon: <StadiumIcon sx={{color: MenuColorCode.events}} />, to: "/events"},
-                {label: '地図情報', icon: <AddLocationAltIcon sx={{color: MenuColorCode.locations}}/>, to: "/locations"}
+                {label: 'トップ', icon: <ThunderstormIcon sx={{color: MenuColorCode.top}}/>, to: UrlMap.top},
+                {label: 'スケジュール', icon: <AccessAlarmsIcon sx={{color: MenuColorCode.schedule}} />, to: UrlMap.schedules},
+                {label: 'イベント', icon: <StadiumIcon sx={{color: MenuColorCode.events}} />, to: UrlMap.events},
+                {label: '地図情報', icon: <AddLocationAltIcon sx={{color: MenuColorCode.locations}}/>, to: UrlMap.locations}
             ].map((item, idx) => (
                 <a key={`menu-link-${idx}`} href={item.to}>
                 <ListItem

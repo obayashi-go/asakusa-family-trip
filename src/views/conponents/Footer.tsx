@@ -1,9 +1,10 @@
-import { Box, IconButton, Typography, styled } from "@mui/material"
+import { Box, /*IconButton,*/ Typography, styled } from "@mui/material"
 import { type FC } from "react"
-import ArrowCircleUpTwoToneIcon from '@mui/icons-material/ArrowCircleUpTwoTone';
+// import ArrowCircleUpTwoToneIcon from '@mui/icons-material/ArrowCircleUpTwoTone';
 
 const SFooterWrapper = styled(Box)({
     width: "100%",
+    height: "50px",
     display: "flex",
     alignItems: "center",
     justifyContent: "space-evenly",
@@ -12,17 +13,17 @@ const SFooterWrapper = styled(Box)({
 })
 
 export const Footer: FC = () => {
-    const smoothScrollUp = () => {
-        console.log("todo smooth scoll up")
-    }
+    // const smoothScrollUp = () => {
+    //     console.log("todo smooth scoll up")
+    // }
     return (
         <SFooterWrapper>
             <Typography>
                 &copy;2024.05.04~05 Obayashi Presents
             </Typography>
-            <IconButton onClick={smoothScrollUp}>
+            {/* <IconButton onClick={smoothScrollUp}>
                 <ArrowCircleUpTwoToneIcon sx={{color: "#fff"}} />
-            </IconButton>
+            </IconButton> */}
         </SFooterWrapper>
     )
 }
