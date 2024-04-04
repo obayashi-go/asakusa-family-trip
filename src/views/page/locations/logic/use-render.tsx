@@ -31,6 +31,15 @@ export const useRender = () => {
                 qr="QR_Nakasei.png"
                 frameSize="middle"
             />
+            <MapCard
+                key={4}
+                cardTitle="三菱ビル（スカイバス発着）"
+                locationFramePath="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6481.7663152722835!2d139.76380029999999!3d35.6798789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfa19d9f7d3%3A0x2b90eb35a5a9ff8d!2z44CSMTAwLTAwMDUg5p2x5Lqs6YO95Y2D5Luj55Sw5Yy65Li444Gu5YaF77yS5LiB55uu77yV4oiS77ySIOS4ieiPseODk-ODqw!5e0!3m2!1sja!2sjp!4v1712149457975!5m2!1sja!2sjp"
+                address="〒100-0005 東京都千代田区丸の内２丁目５−２"
+                tel="03-3215-0008"
+                qr="QR_skybus.png"
+                frameSize="middle"
+            />
             </>
         )
     }

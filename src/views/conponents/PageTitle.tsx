@@ -3,12 +3,12 @@ import { FC } from "react";
 import { MenuColorCode } from "../../utils/constants/menu-color-code";
 import ThunderstormIcon from '@mui/icons-material/Thunderstorm';
 import AccessAlarmsIcon from '@mui/icons-material/AccessAlarms';
-import StadiumIcon from '@mui/icons-material/Stadium';
+import LocalParkingIcon from '@mui/icons-material/LocalParking';
 import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';
 
 export type IPageTitle = {
     title: string;
-    pageType: "top" | "schedule" | "events" | "locations"
+    pageType: "top" | "schedule" | "parking" | "locations"
 }
 
 export const PageTitle: FC<IPageTitle> = (props) => {
@@ -22,8 +22,8 @@ export const PageTitle: FC<IPageTitle> = (props) => {
         case "locations":
             icon = <AddLocationAltIcon />
             break;
-        case "events":
-            icon = <StadiumIcon />
+        case "parking":
+            icon = <LocalParkingIcon />
             break;
         default:
             icon = <ThunderstormIcon />

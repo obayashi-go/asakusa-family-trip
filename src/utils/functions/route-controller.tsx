@@ -4,7 +4,7 @@ import { UrlMap } from "../constants/url-map";
 import { Top } from "../../views/page/top/top";
 import { Schedules } from "../../views/page/schedule/schedule";
 import { Locations } from "../../views/page/locations/locations";
-import { Events } from "../../views/page/events/events";
+import { Parking } from "../../views/page/parking/parking";
 
 export const RouteController: FC = () => {
     return (
@@ -13,7 +13,7 @@ export const RouteController: FC = () => {
                 <Route path={UrlMap.top} Component={Top}></Route>
                 <Route path={UrlMap.schedules} Component={Schedules}></Route>
                 <Route path={UrlMap.locations} Component={Locations}></Route>
-                <Route path={UrlMap.events} Component={Events}></Route>
+                <Route path={UrlMap.parking} Component={Parking}></Route>
             </Routes>
         </Router>
     );

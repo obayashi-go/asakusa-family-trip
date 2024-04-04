@@ -1,6 +1,6 @@
 export const UrlMap = {
     top: "/",
     schedules: "/schedules",
-    events: "/events",
+    parking: "/parking",
     locations: "/locations",
 } as const;
