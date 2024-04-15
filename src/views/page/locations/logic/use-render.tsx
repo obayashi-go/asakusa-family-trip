@@ -6,6 +6,15 @@ export const useRender = () => {
             <>
             <MapCard
                 key={1}
+                cardTitle="駐車場"
+                locationFramePath="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.6130967359795!2d139.8048378757936!3d35.71113752833065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ed0bd4934bf%3A0x1ddb0b85c3890c0f!2z44CSMTMxLTAwMzMg5p2x5Lqs6YO95aKo55Sw5Yy65ZCR5bO277yR5LiB55uu77yS77yW4oiS77yR77yVIOWPpOWuh-eUsOiNmA!5e0!3m2!1sja!2sjp!4v1713176606280!5m2!1sja!2sjp"
+                address="〒131-0033 東京都墨田区向島１丁目２６−１５"
+                tel="---"
+                qr="QR_parking.png"
+                frameSize="middle"
+            />
+            <MapCard
+                key={1}
                 cardTitle="雷門"
                 locationFramePath="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.613959585798!2d139.7937906793457!3d35.7111163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ec6db068cd1%3A0xd9a856805c8012bd!2z6Zu36ZaA!5e0!3m2!1sja!2sjp!4v1711373687028!5m2!1sja!2sjp"
                 address="〒111-0032 東京都台東区浅草２丁目３−１"

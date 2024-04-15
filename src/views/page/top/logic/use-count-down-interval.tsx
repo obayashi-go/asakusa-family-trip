@@ -27,7 +27,7 @@ const Time = styled(Typography)({
 })
 
 export const CountdownInterval = () => {
-  const [countdownDate] = useState(new Date('5/4/2024').getTime());
+  const [countdownDate] = useState(new Date('2024-05-04 09:00:00').getTime());
   const [state, setState] = useState({
     days: 0,
     hours: 0,

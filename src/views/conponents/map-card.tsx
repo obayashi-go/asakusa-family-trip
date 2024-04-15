@@ -33,10 +33,6 @@ export const MapCard: FC<IMapCard> = (props) => {
         default:
             break;
     }
-
-    // const handleZoom = (e: { target: { value: any; }; }) => {
-    //     console.log(e.target.value)
-    // }
     
     return (
         <div style={{borderTop: "solid 2px #4caf50"}}>

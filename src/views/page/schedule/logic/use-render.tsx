@@ -19,6 +19,7 @@ import DirectionsBusIcon from '@mui/icons-material/DirectionsBus';
 import NightlightIcon from '@mui/icons-material/Nightlight';
 import RedeemIcon from '@mui/icons-material/Redeem';
 import HomeWorkIcon from '@mui/icons-material/HomeWork';
+import LuggageIcon from '@mui/icons-material/Luggage';
 import { Link, Paper, Typography, styled } from "@mui/material"
 import { MenuColorCode } from '../../../../utils/constants/menu-color-code';
 
@@ -104,32 +105,35 @@ export const useRender = () => {
                             <Typography variant="h6" component="h1" textAlign="center">
                             到着！
                             </Typography>
-                            <Typography textAlign="left">雷門付近のパーキングに駐車</Typography>
+                            <Typography textAlign="left">
+                                雷門付近のパーキングに駐車<br/>
+                                <a href='/parking'>予約済駐車場</a>
+                            </Typography>
                         </SPaper>
                         </TimelineContent>
                     </TimelineItem>
                     <TimelineItem>
                         <TimelineOppositeContent>
                             <Typography variant="body2" color="textSecondary">
-                            10:00-10:30
+                                10:00-10:30~約30分
                             </Typography>
                         </TimelineOppositeContent>
                         <TimelineSeparator>
-                            <TimelineDot color="warning">
-                                <ShoppingCartCheckoutTwoToneIcon />
+                            <TimelineDot sx={{color: "#333", background: "pink"}}>
+                                <LuggageIcon />
                             </TimelineDot>
                             <TimelineConnector />
                         </TimelineSeparator>
                         <TimelineContent>
-                            <SPaper elevation={3}>
-                                <Typography variant="h6" component="h1" textAlign="center">
-                                人力車
-                                </Typography>
-                                <Typography textAlign="left">
-                                    30分コース×２台<br/>
-                                    <a href='https://www.ebisuya.com/' target='_blank'>えびす屋</a>
-                                </Typography>
-                            </SPaper>
+                        <SPaper elevation={3}>
+                            <Typography variant="h6" component="h1" textAlign="center">
+                            荷物預け
+                            </Typography>
+                            <Typography textAlign="left">
+                                先ずは荷物を預けましょう<br/>
+                                <span style={{fontSize: "14px"}}>※ホテルまでタクシーで約9分</span>
+                            </Typography>
+                        </SPaper>
                         </TimelineContent>
                     </TimelineItem>
                     <TimelineItem>
@@ -150,6 +154,30 @@ export const useRender = () => {
                                 雷門観光
                                 </Typography>
                                 <Typography textAlign="center">観光<br/>食べ歩き<br/>ランチ<br/>お土産</Typography>
+                            </SPaper>
+                        </TimelineContent>
+                    </TimelineItem>
+                    <TimelineItem>
+                        <TimelineOppositeContent>
+                            <Typography variant="body2" color="textSecondary">
+                            16:00~30分
+                            </Typography>
+                        </TimelineOppositeContent>
+                        <TimelineSeparator>
+                            <TimelineDot color="warning">
+                                <ShoppingCartCheckoutTwoToneIcon />
+                            </TimelineDot>
+                            <TimelineConnector />
+                        </TimelineSeparator>
+                        <TimelineContent>
+                            <SPaper elevation={3}>
+                                <Typography variant="h6" component="h1" textAlign="center">
+                                人力車
+                                </Typography>
+                                <Typography textAlign="left">
+                                    30分コース×２台<br/>
+                                    <a href='https://www.ebisuya.com/' target='_blank'>えびす屋</a>
+                                </Typography>
                             </SPaper>
                         </TimelineContent>
                     </TimelineItem>
@@ -256,7 +284,7 @@ export const useRender = () => {
                     <TimelineItem>
                         <TimelineOppositeContent>
                             <Typography variant="body2" color="textSecondary">
-                                9:30
+                                9:30-10:00
                             </Typography>
                             </TimelineOppositeContent>
                             <TimelineSeparator>
@@ -280,7 +308,7 @@ export const useRender = () => {
                     <TimelineItem>
                         <TimelineOppositeContent>
                             <Typography variant="body2" color="textSecondary">
-                                10:00
+                                10:30~50分
                             </Typography>
                             </TimelineOppositeContent>
                             <TimelineSeparator>
@@ -294,7 +322,18 @@ export const useRender = () => {
                                 <Typography variant="h6" component="h1"  textAlign="center">
                                 スカイバス
                                 </Typography>
-                                <Typography textAlign="left">皇居・銀座・丸の内コース<br/>約50分</Typography>
+                                <Typography textAlign="left">東京タワー・レインボーブリッジコース<br/>
+                                <span style={{
+                                    color: "#fff",
+                                    background: "midnightblue",
+                                    display: "block",
+                                    padding: "2px 4px",
+                                    fontSize: "14px",
+                                    borderRadius: "10px",
+                                    width: "fit-content",
+                                    margin: "0 auto"
+                                    }}>約50分</span>
+                                </Typography>
                             </SPaper>
                         </TimelineContent>
                     </TimelineItem>
