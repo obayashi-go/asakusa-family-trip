@@ -49,6 +49,16 @@ export const useRender = () => {
                 qr="QR_skybus.png"
                 frameSize="middle"
             />
+            <MapCard
+                key={4}
+                id="2day-lunch"
+                cardTitle="瓢喜 八重洲店"
+                locationFramePath="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.9093989771513!2d139.7746604!3d35.6792328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601889583900bd59%3A0x790e00c2a4f3c02d!2z44CSMTAzLTAwMjcg5p2x5Lqs6YO95Lit5aSu5Yy65pel5pys5qmL77yT5LiB55uu77yR77yT4oiS77yR77yR!5e0!3m2!1sja!2sjp!4v1714102593608!5m2!1sja!2sjp"
+                address="〒103-0027 東京都中央区日本橋３丁目１３−１１ 油脂工業会館 1F"
+                tel="03-5204-8067"
+                qr="QR_lunch.png"
+                frameSize="middle"
+            />
             </>
         )
     }

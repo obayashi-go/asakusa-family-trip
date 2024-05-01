@@ -407,6 +407,16 @@ export const useRender = () => {
                                     width: "fit-content",
                                     margin: "0 auto"
                                     }}>約50分</span>
+                                <span style={{
+                                    fontSize: "12px",
+                                    background: "#c16695",
+                                    color: "#fff",
+                                    display: "inline-flex",
+                                    padding: "4px 6px",
+                                    margin: "10px 0 0",
+                                    textAlign: "center",
+                                    borderBottom: "solid 3px #000"
+                                }}>タップしてコースを確認!</span>
                                 </Typography>
                             </SPaper>
                         </TimelineContent>
@@ -414,7 +424,7 @@ export const useRender = () => {
                     <TimelineItem>
                         <TimelineOppositeContent>
                             <Typography variant="body2" color="textSecondary">
-                                11:30
+                                12:00
                             </Typography>
                             </TimelineOppositeContent>
                             <TimelineSeparator>
@@ -428,14 +438,26 @@ export const useRender = () => {
                                 <Typography variant="h6" component="h1"  textAlign="center">
                                 ランチ
                                 </Typography>
-                                <Typography textAlign="left">IN 東京駅</Typography>
+                                <Typography textAlign="left">
+                                    瓢喜 八重洲店<br/>
+                                    <ul
+                                    style={{padding: "0  0  0 20px"}}
+                                    >
+                                        <li>
+                                            <a href='/locations#2day-lunch'>地図情報</a>
+                                            </li>
+                                        <li>
+                                        <a href="https://hyoki.jp/shop/yaesu/" target='_brank'>店舗情報</a>
+                                        </li>
+                                    </ul>
+                                </Typography>
                             </SPaper>
                         </TimelineContent>
                     </TimelineItem>
                     <TimelineItem>
                         <TimelineOppositeContent>
                             <Typography variant="body2" color="textSecondary">
-                                12:30
+                                14:00~
                             </Typography>
                             </TimelineOppositeContent>
                             <TimelineSeparator>
@@ -456,7 +478,7 @@ export const useRender = () => {
                     <TimelineItem>
                         <TimelineOppositeContent>
                             <Typography variant="body2" color="textSecondary">
-                                13:30-14:00~
+                                15:00-16:00~
                             </Typography>
                             </TimelineOppositeContent>
                             <TimelineSeparator>
@@ -588,7 +610,6 @@ export const useRender = () => {
                         </STimelineOppositeContent>
                         <TimelineSeparator>
                         <TimelineDot color='error' />
-                        <TimelineConnector />
                         </TimelineSeparator>
                         <TimelineContent sx={{fontSize: "small"}}>ホテル</TimelineContent>
                     </TimelineItem>
@@ -609,7 +630,7 @@ export const useRender = () => {
                         <MoveTime>10分〜20分</MoveTime>
                         </STimelineOppositeContent>
                         <TimelineSeparator>
-                        <TimelineDot color='primary' />
+                        <TimelineDot color='primary' variant='outlined' />
                         <TimelineConnector />
                         </TimelineSeparator>
                         <TimelineContent sx={{fontSize: "small"}}>ホテルチェックアウト</TimelineContent>
@@ -620,7 +641,7 @@ export const useRender = () => {
                             <MoveTime>10分</MoveTime>
                         </STimelineOppositeContent>
                         <TimelineSeparator>
-                        <TimelineDot color='secondary' />
+                        <TimelineDot color='secondary' variant='outlined' />
                         <TimelineConnector />
                         </TimelineSeparator>
                         <TimelineContent sx={{fontSize: "small"}}>駐車場</TimelineContent>
@@ -628,28 +649,39 @@ export const useRender = () => {
                     <TimelineItem>
                         <STimelineOppositeContent color="text.secondary">
                             <Typography>10:15前後</Typography>
-                            <MoveTime>10分前後</MoveTime>
+                            <MoveTime>7分</MoveTime>
                         </STimelineOppositeContent>
                         <TimelineSeparator>
-                        <TimelineDot color='secondary' variant='outlined' />
+                        <TimelineDot color='info' />
                         <TimelineConnector />
                         </TimelineSeparator>
                         <TimelineContent sx={{fontSize: "small"}}>スカイバス発着</TimelineContent>
                     </TimelineItem>
                     <TimelineItem>
                         <STimelineOppositeContent color="text.secondary">
-                            <Typography>11:00-11:30</Typography>
-                            <MoveTime>1時間〜<br/>1時間30分</MoveTime>
+                            <Typography>12:00-14:00</Typography>
+                            <MoveTime>4分〜11分</MoveTime>
                         </STimelineOppositeContent>
                         <TimelineSeparator>
-                        <TimelineDot color='warning' />
+                        <TimelineDot color='secondary' />
                         <TimelineConnector />
                         </TimelineSeparator>
-                        <TimelineContent sx={{fontSize: "small"}}>東京駅</TimelineContent>
+                        <TimelineContent sx={{fontSize: "small"}}>瓢喜 八重洲店（ランチ）</TimelineContent>
                     </TimelineItem>
                     <TimelineItem>
                         <STimelineOppositeContent color="text.secondary">
-                            <Typography>16:00-17:00</Typography>
+                            <Typography>14:00-15:00</Typography>
+                            <MoveTime>1時間〜<br/>1時間30分</MoveTime>
+                        </STimelineOppositeContent>
+                        <TimelineSeparator>
+                        <TimelineDot color='warning' variant='outlined' />
+                        <TimelineConnector />
+                        </TimelineSeparator>
+                        <TimelineContent sx={{fontSize: "small"}}>東京駅周辺お土産探し</TimelineContent>
+                    </TimelineItem>
+                    <TimelineItem>
+                        <STimelineOppositeContent color="text.secondary">
+                            <Typography>16:30-17:30</Typography>
                         </STimelineOppositeContent>
                         <TimelineSeparator>
                         <TimelineDot color='success' />

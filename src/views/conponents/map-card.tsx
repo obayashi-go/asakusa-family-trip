@@ -15,10 +15,11 @@ export type IMapCard = {
     tel: string;
     qr: string;
     frameSize?: "large" | "middle" | "small" | undefined;
+    id?: string;
 }
 
 export const MapCard: FC<IMapCard> = (props) => {
-    const { cardTitle, locationFramePath, frameSize, address, tel, qr } = props;
+    const { cardTitle, locationFramePath, frameSize, address, tel, qr, id } = props;
     let height: string = "auto";
     switch (frameSize) {
         case "large":
@@ -36,7 +37,7 @@ export const MapCard: FC<IMapCard> = (props) => {
     
     return (
         <div style={{borderTop: "solid 2px #4caf50"}}>
-            <Accordion>
+            <Accordion id={id}>
                 <AccordionSummary
                 expandIcon={<ArrowDropDownIcon />}
                 aria-controls="panel1-content"
