@@ -139,7 +139,7 @@ export const useRender = () => {
         return (
         <Box
         position="relative"
-        height="100vh"
+        paddingBottom={2}
         sx={{
             backgroundColor:"#e6b4ce4a",
             opacity: "0.8",

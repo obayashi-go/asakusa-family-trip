@@ -5,10 +5,11 @@ import ThunderstormIcon from '@mui/icons-material/Thunderstorm';
 import AccessAlarmsIcon from '@mui/icons-material/AccessAlarms';
 import LocalParkingIcon from '@mui/icons-material/LocalParking';
 import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';
+import QuizIcon from '@mui/icons-material/Quiz';
 
 export type IPageTitle = {
     title: string;
-    pageType: "top" | "schedule" | "parking" | "locations"
+    pageType: "top" | "schedule" | "parking" | "locations" | "go"
 }
 
 export const PageTitle: FC<IPageTitle> = (props) => {
@@ -24,6 +25,9 @@ export const PageTitle: FC<IPageTitle> = (props) => {
             break;
         case "parking":
             icon = <LocalParkingIcon />
+            break;
+        case "go":
+            icon = <QuizIcon />
             break;
         default:
             icon = <ThunderstormIcon />

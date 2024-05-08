@@ -14,7 +14,8 @@ const Wrapper = styled(Box)({
 });
 
 const ContentsWrapper = styled(Box)({
-    marginTop: "60px"
+    marginTop: "60px",
+    minHeight: "calc(100vh - 110px)"
 });
 
 export const CustomLayout: FC<ICustomLayout> = (props) => {
